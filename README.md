@@ -4,6 +4,7 @@
 * [MySQL](https://www.mysql.com/)
 * [Redis](https://redis.io/)
 
+
 ## Requirements
 * [Docker](https://www.docker.com/)
 
@@ -20,12 +21,13 @@ cd docker-fak-pool
 ```
 
 ### <a name="mediumway"></a>The medium way
-Optional: copy config file, edit.
+#### Optional: copy config file, edit.
 ```
 cp ./install-config.dist ./install-config
 vi ./install-config
 ```
-Options (everything is optional. Change values but don't delete exports):
+
+#### Options (everything is optional. Change values but don't delete exports):
 * POOL_URL - used in info, and to generate stratum link.
 * POOL_LOCATION - us/eu [ISO_3166-1_alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
 * DOCKER_USER - build images as DOCKER_USER/IMAGE_NAME
@@ -33,17 +35,15 @@ Options (everything is optional. Change values but don't delete exports):
 * WALLET_ADDRESS - auto-fetched from wallet.dat on ./install.sh run
 * ADMIN_TAX_WALLET - server admin wallet, will be added to pool tax block
 
-
-Optional: Use old wallet.dat
+#### Optional: Use old wallet.dat
 ```
 cp [WALLET_LOCATION] ./conf-fakecoind/
 ```
 
-Then:
+#### Then:
 ```
 ./install.sh
 ```
-
 
 ### <a name="hardway"></a>The hard way
 #### Edit .env file
