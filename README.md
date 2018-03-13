@@ -3,19 +3,23 @@
 * [CoiniumServ](https://github.com/bonesoul/CoiniumServ)
 * [MySQL](https://www.mysql.com/)
 * [Redis](https://redis.io/)
+
+## Requirements
 * [Docker](https://www.docker.com/)
 
-# Install Options
+## Install Options
 * [FAKing easy](#the-easy-way)
 * [FAKing medium](#the-medium-way)
 * [FAKing hard](#the-hard-way)
 
-## <a name="easyway"></a>The easy way
+### <a name="easyway"></a>The easy way
 ```
+git clone https://github.com/someThor/docker-fak-pool.git
+cd docker-fak-pool
 ./install.sh
 ```
 
-## <a name="mediumway"></a>The medium way
+### <a name="mediumway"></a>The medium way
 Optional: copy config file, edit.
 ```
 cp ./install-config.dist ./install-config
@@ -41,17 +45,18 @@ Then:
 ```
 
 
-## <a name="hardway"></a>The hard way
-### Edit .env file
+### <a name="hardway"></a>The hard way
+#### Edit .env file
 
-### Start fakecoind service, and get account wallet address:
+#### Start fakecoind service, and get account wallet address:
 ```
 docker-compose build fakecoind
 docker-compose up fakecoind -d
-docker-compose exec fakecoind sh -c 'fakecoin-cli -rpcuser=username -rpcpassword=password getaccountaddress ""'
+docker-compose exec fakecoind sh -c \
+'fakecoin-cli -rpcuser=username -rpcpassword=password getaccountaddress ""'
 ```
 
-### Edit CoiniumServ pool config
+#### Edit CoiniumServ pool config
 (./coiniumserv/pools.fakecoin.json)
 
 ```
@@ -76,12 +81,12 @@ docker-compose exec fakecoind sh -c 'fakecoin-cli -rpcuser=username -rpcpassword
     ],
 ```
 
-### Start everything
+#### Start everything
 ```
 docker-compose up -d
 ```
 
-### View logs
+#### View logs
 ```
 docker-compose logs -f --tail=10
 ```
