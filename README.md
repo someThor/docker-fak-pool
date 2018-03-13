@@ -1,8 +1,14 @@
-# <> All in one fakecoind, CoiniumServ, myslq, redis service.
+# <> All in one docker-compose [FAK](https://fakco.in/) mining pool <>
+* [FakeCoin-qt](https://github.com/Fake-Coin/FakeCoin-qt)
+* [CoiniumServ](https://github.com/bonesoul/CoiniumServ)
+* [MySQL](https://www.mysql.com/)
+* [Redis](https://redis.io/)
+* [Docker](https://www.docker.com/)
 
-* [FAKing easy] (#easyway)
-* [FAKing medium] (#mediumway)
-* [FAKing hard] (#hardway)
+# Install Options
+* [FAKing easy](#the-easy-way)
+* [FAKing medium](#the-medium-way)
+* [FAKing hard](#the-hard-way)
 
 ## <a name="easyway"></a>The easy way
 ```
