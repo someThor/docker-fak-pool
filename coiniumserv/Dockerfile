@@ -3,7 +3,7 @@ FROM mono:latest
 ENV INSTALL_PATH=/usr/src/app/
 WORKDIR $INSTALL_PATH
 
-RUN apt update && apt install -y mysql-client wget
+RUN apt update && apt install -y mysql-client wget && rm -rf /var/lib/apt/lists/*
 
 ADD start.sh $INSTALL_PATH
 ADD https://github.com/bonesoul/CoiniumServ/archive/master.tar.gz $INSTALL_PATH
