@@ -1,0 +1,8 @@
+
+.env
+install-config
+backup
+
+# Coiniumserv
+coiniumserv/config.json
+coiniumserv/pools.fakecoin.json

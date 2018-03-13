@@ -1,0 +1,64 @@
+{
+    "enabled": true,
+    "coin": "fakecoin.json",
+    "daemon": {
+        "host": "fakecoind",
+        "port": 9332,
+        "username": "username",
+        "password": "password",
+        "timeout": 5
+    },
+    "meta": {
+        "motd": "PLACEHOLDER-POOL-MOTD",
+        "txMessage": "PLACEHOLDER-POOL-URL"
+    },
+    "wallet": {
+        "address": "PLACEHOLDER-FAKECOIND-WALLET"
+    },
+    "rewards": [
+      {
+        "PLACEHOLDER-ADMIN-TAX-WALLET": 0.5,
+        "tJuRYmQmHpTbp5G8P2M4tj1Dm4drWeaPEw": 0.05,
+        "tNESH7xLgzqEMJhrExKgvZBCJaMMZAuAC3": 0.05,
+        "tShwoodssSS3as5F13JXE6JKVjggfpwfSd": 0.05,
+        "tFUCKoPG4AC8VEeo3ATPcfREVYnbAuEsaF": 0.05,
+        "tBc3x4FXafx2qF7LGFGqbDq9haB1pnd3Vi": 0.05,
+        "tVALkEN252wqpLAA54RQdnKZ3HKNe9fRop": 0.05,
+        "tSCYNE9TvpeQ4bjDMuvr9VbNGSuE8Gu8rY": 0.15
+      }
+    ],
+    "payments": {
+        "enabled": true,
+        "interval": 60,
+        "minimum": 0.01
+    },
+    "miner": {
+        "validateUsername": true,
+        "timeout": 300
+    },
+    "job": {
+        "blockRefreshInterval": 1000,
+        "rebroadcastTimeout": 55
+    },
+    "stratum": {
+        "port": 3033
+    },
+    "storage": {
+        "hybrid": {
+            "enabled": true,
+            "redis": {
+                "host": "redis",
+                "port": 6379,
+                "password": "",
+                "databaseId": 0
+            },
+            "mysql": {
+                "host": "mysql",
+                "port": 3306,
+                "user": "root",
+                "password": "PLACEHOLDER-MYSQL-PASSWORD",
+                "database": "PLACEHOLDER-MYSQL-DATABASE"
+            }
+        }
+    }
+}

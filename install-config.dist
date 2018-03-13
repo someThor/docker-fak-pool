@@ -1,0 +1,14 @@
+export SERVER_NAME="FAKer pool!"
+export POOL_MOTD="Get FAK'ed!!!"
+export POOL_URL="someplace.com"
+export POOL_LOCATION="us"
+
+export DOCKER_USER="someuser"
+export GIT_FAKECOIND_VERSION="latest"
+export GIT_FAKECOIND_BRANCH="master"
+export MYSQL_VERSION="8.0.3"
+export MYSQL_DATABASE="fakecoin"
+export MYSQL_PASSWORD="fakepass"
+
+export WALLET_ADDRESS=""
+export ADMIN_TAX_WALLET=""

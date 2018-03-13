@@ -1,0 +1,42 @@
+version: '2'
+services:
+  fakecoind:
+    container_name: pool_fakecoind
+    image: ${DOCKER_USER}/fakecoind:${GIT_FAKECOIND_VERSION}
+    # build: ./fakecoind-nightly
+    build:
+      context: ./fakecoind-git
+      args:
+        BRANCH: ${GIT_FAKECOIND_BRANCH}
+    volumes:
+      - ./conf-fakecoind:/root/.fakecoin
+    expose:
+      - "9332"
+    ports:
+      - "9333:9333"
+  redis:
+    container_name: pool_redis
+    image: redis:alpine
+    expose:
+      - "6379"
+  mysql:
+    container_name: pool_mysql
+    image: mysql:${MYSQL_VERSION}
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    expose:
+      - "3306"
+  coiniumserv:
+    container_name: pool_coiniumserv
+    build: ./coiniumserv/
+    image: ${DOCKER_USER}/coiniumserv
+    volumes:
+      - ./conf-coiniumserv/:/usr/src/app/CoiniumServ-master/build/bin/Release/config
+    ports:
+      - "3080:80"
+      - "3033:3033"
+    links:
+      - fakecoind
+      - redis
+      - mysql

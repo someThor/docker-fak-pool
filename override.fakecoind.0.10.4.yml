@@ -1,0 +1,8 @@
+ version: '2'
+ services:
+   fakecoind:
+     image: ${DOCKER_USER}/fakecoind:0.10.4
+     build:
+       context: ./fakecoind-nightly
+       args:
+         URL: https://download.fakco.in/nightly/fakecoin-qt/latest-2018-03-02-4c74a782/fakecoin-0.10.4-linux.tar.xz

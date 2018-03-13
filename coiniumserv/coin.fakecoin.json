@@ -1,0 +1,15 @@
+{
+    "name": "FakeCoin",
+    "symbol": "FAK",
+    "algorithm": "scrypt",
+    "site": "https://explorer.fakco.in/",
+    "blockExplorer": {
+        "block": "https://explorer.fakco.in/block/",
+        "tx": "https://explorer.fakco.in/tx/",
+        "address": "https://explorer.fakco.in/address/"
+    },
+    "node": {
+        // "magic": "fbc0b6db",
+        // "testnetMagic": "fcc1b7dc"
+    }
+}
