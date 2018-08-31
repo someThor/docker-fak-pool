@@ -46,7 +46,12 @@ cp [WALLET_LOCATION] ./conf-fakecoind/
 ```
 
 ### <a name="hardway"></a>The hard way
-#### Edit .env file
+#### Create and edit .env file
+```
+cp .env-dist .env
+vi .env
+```
+
 
 #### Start fakecoind service, and get account wallet address:
 ```
