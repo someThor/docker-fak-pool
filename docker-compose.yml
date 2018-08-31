@@ -40,3 +40,5 @@ services:
       - fakecoind
       - redis
       - mysql
+    stdin_open: true
+    #tty: true

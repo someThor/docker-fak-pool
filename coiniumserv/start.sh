@@ -14,3 +14,4 @@ fi
 sleep 5
 cd $INSTALL_PATH
 mono ./CoiniumServ-master/build/bin/Release/CoiniumServ.exe
+export MONO_THREADS_PER_CPU=100
