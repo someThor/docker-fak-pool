@@ -29,7 +29,11 @@ services:
       - "3306"
   coiniumserv:
     container_name: pool_coiniumserv
-    build: ./coiniumserv/
+    # build: ./coiniumserv/
+    build:
+      context: ./coiniumserv/
+      args:
+        BRANCH: ${COINIUM_BRANCH}
     image: ${DOCKER_USER}/coiniumserv
     volumes:
       - ./conf-coiniumserv/:/usr/src/app/CoiniumServ-master/build/bin/Release/config
